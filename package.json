@@ -1,0 +1,26 @@
+{
+  "name": "quilombodrivdev",
+  "version": "1.0.0",
+  "description": "Blog made in React for learning purposes",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alancampora/quilombodrivdev.git"
+  },
+  "keywords": [
+    "blog",
+    "react",
+    "redux",
+    "node",
+    "js"
+  ],
+  "author": "Alan Campora <alan.campora@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alancampora/quilombodrivdev/issues"
+  },
+  "homepage": "https://github.com/alancampora/quilombodrivdev#readme"
+}

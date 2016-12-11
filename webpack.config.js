@@ -1,5 +1,6 @@
 var path = require("path");
 var webpack = require('webpack');
+
 module.exports = {
     entry: {
         app: ["./client/app/index.js"]
@@ -17,10 +18,19 @@ module.exports = {
             query: {
                 presets: ['react', 'es2015']
             }
-        }]
-    }, 
+        }, 
+            //{
+            //test: /\.scss$/,
+            //loaders: ["sass-loader"]
+        //}
+        ],
+        //sassLoader: {
+            //includePaths: [path.resolve(__dirname, "./client/app/components/**/*.scss")]
+        //},
+
+    },
     plugins: [
-       new webpack.HotModuleReplacementPlugin(),
-       new webpack.NoErrorsPlugin()
-   ]
+        new webpack.HotModuleReplacementPlugin(),
+        new webpack.NoErrorsPlugin()
+    ]
 };

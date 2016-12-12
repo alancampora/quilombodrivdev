@@ -1,26 +1,28 @@
-import {ADD_POST, FETCH_POSTS, FETCH_POSTS_SUCCESS} from '../constants/ActionTypes';
-
-let nextPostId = 0;
-
-export const addPost = (post) => ({
-    type: ADD_POST,
-    id: nextPostId++,
-    post: post
-})
+import {ADD_POST, FETCH_POSTS, FETCH_POSTS_SUCCESS, FETCH_POSTS_FAIL} from '../constants/ActionTypes';
+import Api from '../api/Api'
 
 export const fetchPosts = () => {
-    const request = 'this is a request'
-    return{
-        type: FETCH_POSTS,
-        payload: request,
-        isFetching: true}
+    return (dispatch) => {
+        return Api
+            .fetchPosts()
+            .then( posts => { dispatch(fetchPostsSuccess(posts)) }) 
+            .catch( error => { dispatch(fetchPostsFail(error)) })
+    }
 }
 
-export const fetchPostsSuccess = (response) =>{
+export const fetchPostsSuccess = (posts) =>{
+    console.log('fetch posts success' , posts)
     return {
         type: FETCH_POSTS_SUCCESS,
-        payload: response.posts,
-        isFetching:false 
+        posts: posts
+    }
+
+}
+
+export const fetchPostsFail = (posts) =>{
+    return {
+        type: FETCH_POSTS_FAIL,
+        payload: posts
     }
 
 }

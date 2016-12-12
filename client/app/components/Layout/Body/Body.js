@@ -6,9 +6,10 @@ class Body extends React.Component {
     
     createPostsArray(){
         let key = 0
+        console.log('body' , this.props.posts)
         return this.props.posts.map(post => {
             key++
-            return <Post key={key} title={post.title} text={post.text}/>})
+            return <Post key={key} title={post.title} text={post.description}/>})
     } 
     
     render() {

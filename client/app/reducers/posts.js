@@ -4,29 +4,24 @@ import {
     FETCH_POSTS_FAIL,
     FETCH_POSTS_SUCCESS
 } from '../constants/ActionTypes';
+import initialState from './initialState'
 
-const initialState = [
-    posts: {
-        title: "Title for first post",
-        text: "Welcome to the first post of qdd!"
-    }, 
-    isFetching: false
-]
-
-export function posts(state = initialState.posts, action) {
+//nice
+export default function posts(state = initialState, action) {
+    console.log('POSTS REDUCER', initialState, action)
+    
     switch (action.type) {
-        case ADD_POST:
-            return ([action.post, ...state]);
+        case FETCH_POSTS_SUCCESS:
+            /*
+             *When we are loading cats from the API, we want to completely overwrite the 
+             *previous cat collection from our state with the new cat collection from our 
+             *API.So no need to create any object copies here
+             */
+            console.log('FETCH_POSTS_SUCCESS', action)
+            return action.posts
         default:
             return state;
     }
 }
 
-//export function fetchPosts(state = initialState, action){
-    //switch(action.type){
-        //case FETCH_POSTS: 
-           //return Object.assign({}, state , {isFetching: action.isFetching}) 
-        //case FETCH_POSTS_SUCCESSS:
-            //return Object.assign({},state, posts: action.payload)
-    //}
-//}
+

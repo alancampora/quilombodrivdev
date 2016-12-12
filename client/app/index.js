@@ -4,8 +4,9 @@ import App from './containers/App';
 import { Provider } from 'react-redux'
 import { createStore } from 'redux'
 import reducer from './reducers/index'
+import configureStore  from './store/store'
 
-let store = createStore(reducer)
+let store = configureStore() 
 
 const app = document.getElementById('app');
 

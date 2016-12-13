@@ -5,16 +5,14 @@ import Post from '../../Post/Post';
 class Body extends React.Component {
     
     createPostsArray(){
-        let key = 0
-        console.log('body' , this.props.posts)
+        let key = 0;
         return this.props.posts.map(post => {
-            key++
-            return <Post key={key} title={post.title} text={post.description}/>})
+            key++;
+            return <Post key={key} title={post.title} text={post.description}/>;})
     } 
     
     render() {
-        const posts = this.createPostsArray() 
-        console.log(posts) 
+        const posts = this.createPostsArray(); 
         
         return ( 
             <div>

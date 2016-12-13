@@ -19,10 +19,10 @@ export const fetchPostsSuccess = (posts) =>{
 
 }
 
-export const fetchPostsFail = (posts) =>{
+export const fetchPostsFail = (error) =>{
     return {
         type: FETCH_POSTS_FAIL,
-        payload: posts
+        payload:error 
     }
 
 }

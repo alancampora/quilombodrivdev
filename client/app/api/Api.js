@@ -1,6 +1,5 @@
 export default class Api {
     static fetchPosts() {
-        //TODO: read md posts.
         return Promise.resolve([{
             id: 1,
             title: 'first post',

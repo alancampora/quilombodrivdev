@@ -1,5 +1,5 @@
 import {ADD_POST, FETCH_POSTS, FETCH_POSTS_SUCCESS, FETCH_POSTS_FAIL} from '../constants/ActionTypes';
-import Api from '../api/Api'
+import Api from '../api/Api';
 
 export const fetchPosts = () => {
     return (dispatch) => {
@@ -11,7 +11,6 @@ export const fetchPosts = () => {
 }
 
 export const fetchPostsSuccess = (posts) =>{
-    console.log('fetch posts success' , posts)
     return {
         type: FETCH_POSTS_SUCCESS,
         posts: posts

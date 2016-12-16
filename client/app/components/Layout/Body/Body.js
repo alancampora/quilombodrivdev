@@ -8,7 +8,7 @@ class Body extends React.Component {
         let key = 0;
         return this.props.posts.map(post => {
             key++;
-            return <Post key={key} title={post.title} text={post.description}/>;})
+            return <Post key={key} title={post.title} text={post.text}/>;})
     } 
     
     render() {

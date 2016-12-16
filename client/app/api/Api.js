@@ -7,7 +7,7 @@ export default class Api {
                 return error;
             });
         }
-        //goto;
+        //gotoasfda;
         //return Promise.resolve([{
         //id: 1,
         //title: 'first post',

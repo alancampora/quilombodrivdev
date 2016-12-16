@@ -1,10 +1,11 @@
 var express = require('express'),
-    app = express(), 
-    port = process.env.PORT || 8089,
-    router = express.Router(), 
-    mongoose = require('mongoose');
+    app = express(),
+    port = process.env.OPENSHIFT_NODEJS_PORT || 8089,
+    router = express.Router(),
+    mongoose = require('mongoose'),
+    serverIP = process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1';
 //DB
-mongoose.connect('mongodb://localhost/qdd');
+mongoose.connect('mongodb://' + serverIP + '/qdd');
 
 // REGISTER OUR ROUTES -------------------------------
 // all of our routes will be prefixed with /qdd

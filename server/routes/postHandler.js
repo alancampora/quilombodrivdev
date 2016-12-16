@@ -6,7 +6,7 @@ const postHandler = {};
 postHandler.getAll = function(req, res) {
     Post.find({}, function(err, data) {
         if (err) throw err;
-        console.log(new Date(), data);
+        console.log('new request:', new Date(), data);
         // object of all the users
         res.json(data);
     });

@@ -15,6 +15,10 @@ module.exports = charmander.inject(['packageJSON'],
                 return packageJSON[key]; 
             } 
         } 
+    
+    
+        function _internal(otherdependency){}
+
     }
 )(); 
 

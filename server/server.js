@@ -1,8 +1,10 @@
 var express = require('express'),
     app = express(), 
-    port = process.env.PORT || 8081,
-    router = express.Router();
-
+    port = process.env.PORT || 8089,
+    router = express.Router(), 
+    mongoose = require('mongoose');
+//DB
+mongoose.connect('mongodb://localhost/qdd');
 
 // REGISTER OUR ROUTES -------------------------------
 // all of our routes will be prefixed with /qdd

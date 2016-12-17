@@ -5,7 +5,7 @@ var fs      = require('fs');
 
 
 /**
- *  Define the sample application.
+ *  tesing mod Define the sample application.
  */
 var SampleApp = function() {
 

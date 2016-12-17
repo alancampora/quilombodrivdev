@@ -1,3 +1,5 @@
+#!/bin/env node
+
 var express = require('express'),
     app = express(),
     port = process.env.OPENSHIFT_NODEJS_PORT || 8089,
@@ -5,6 +7,8 @@ var express = require('express'),
     mongoose = require('mongoose'),
     serverIP = process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1';
 //DB
+
+
 mongoose.connect('mongodb://' + serverIP + '/qdd');
 
 // REGISTER OUR ROUTES -------------------------------

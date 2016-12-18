@@ -1,1 +1,1 @@
-web: babel-node tools/postbuild.js  
+web: ./node_modules/.bin/babel-node ./tools/postbuild.js 

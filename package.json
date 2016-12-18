@@ -6,7 +6,6 @@
   "scripts": {
     "test": "node_modules/.bin/jasmine-node server/test",
     "dev": "./node_modules/.bin/webpack-dev-server --content-base ",
-    "start": "node ./server/server.js",
     "test:watch": "onchange server/**/* -- npm run test"
   },
   "repository": {

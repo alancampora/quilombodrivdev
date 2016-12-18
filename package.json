@@ -6,7 +6,13 @@
   "scripts": {
     "test": "node_modules/.bin/jasmine-node server/test",
     "dev": "./node_modules/.bin/webpack-dev-server --content-base ",
-    "test:watch": "onchange server/**/* -- npm run test"
+    "test:watch": "onchange server/**/* -- npm run test",
+    "clean-dist": "npm run remove-dist && mkdir dist",
+    "remove-dist": "node_modules/.bin/rimraf ./dist",
+    "build:html": "./node_modules/.bin/babel-node ./tools/buildHTML.js",
+    "prebuild": "npm run clean-dist && npm run build:html",
+    "build": "./node_modules/.bin/babel-node ./tools/build.js",
+    "postbuild": "./node_modules/.bin/babel-node ./tools/postbuild.js"
   },
   "repository": {
     "type": "git",
@@ -26,16 +32,22 @@
   },
   "homepage": "https://github.com/alancampora/quilombodrivdev#readme",
   "devDependencies": {
+    "babel-cli": "^6.18.0",
     "babel-core": "^6.4.5",
     "babel-loader": "^6.2.1",
     "babel-preset-es2015": "^6.3.13",
     "babel-preset-react": "^6.3.13",
+    "charmander-injector": "^0.4.0",
+    "colors": "^1.1.2",
     "jasmine-node": "^1.14.5",
     "onchange": "^3.2.0",
-    "webpack-dev-server": "^1.16.2"
+    "rimraf": "^2.5.4",
+    "serve-favicon": "^2.3.2",
+    "webpack": "^1.12.12"
   },
   "dependencies": {
-    "webpack": "^1.12.12",
+    "cheerio": "^0.22.0",
+    "express": "^4.14.0",
     "json-loader": "^0.5.4",
     "react": "^15.4.1",
     "react-dom": "^15.4.1",

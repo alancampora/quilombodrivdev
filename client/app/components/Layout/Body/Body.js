@@ -16,7 +16,7 @@ class Body extends React.Component {
         
         return ( 
             <div>
-                <h1> This is the body </h1>
+                <h1> This is the body!!!!</h1>
                 {posts} 
             </div>
         );

@@ -1,25 +1,32 @@
-var express = require('express');  
-var path = require('path');  
-var open = require('open');  
-var compression =  require('compression');  
-var favicon = require('serve-favicon');
+/*
+ *var express = require('express');  
+ *var path = require('path');  
+ *var open = require('open');  
+ *var compression =  require('compression');  
+ *var favicon = require('serve-favicon');
+ *
+ *[>eslint-disable no-console <]
+ *
+ *const port = process.env.PORT || 3000;  
+ *const app = express();
+ *
+ *app.use(express.static('public'));  
+ *
+ *app.get('*', function(req, res) {  
+ *  res.sendFile(path.join(__dirname, '../dist/index.html'));
+ *});
+ *
+ *app.listen(port, function(err) {  
+ *  if (err) {
+ *    console.log(err);
+ *  } else {
+ *    open(`http://localhost:${port}`);
+ *  }
+ *});
+ */
+var express = require('express');
+var app = express();
 
-/*eslint-disable no-console */
+app.use(express.static(__dirname + '/'));
 
-const port = process.env.PORT || 3000;  
-const app = express();
-
-app.use(compression());  
-app.use(express.static('public'));  
-
-app.get('*', function(req, res) {  
-  res.sendFile(path.join(__dirname, '../dist/index.html'));
-});
-
-app.listen(port, function(err) {  
-  if (err) {
-    console.log(err);
-  } else {
-    open(`http://localhost:${port}`);
-  }
-});
+app.listen(process.env.PORT || 8080);

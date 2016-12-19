@@ -18,10 +18,7 @@ module.exports = {
                 query: {
                     presets: ['react', 'es2015']
                 }
-            }, {
-                test: /\.json$/,
-                loader: 'json'
-            }
+            },
             //{
             //test: /\.scss$/,
             //loaders: ["sass-loader"]
@@ -29,7 +26,7 @@ module.exports = {
         ],
         //sassLoader: {
         //includePaths: [path.resolve(__dirname, "./client/app/components/**/*.scss")]
-        //aaaskfjaklsdfj},
+        //},
 
     },
     plugins: [

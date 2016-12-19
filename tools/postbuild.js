@@ -1,7 +1,7 @@
 var express = require('express');  
 var path = require('path');  
 var open = require('open');  
-
+var compression = require('compression');
 /*eslint-disable no-console */
 
 const port = process.env.PORT || 3000;  
@@ -13,7 +13,10 @@ const app = express();
  *console.log('path join' , (path.join(__dirname, '../dist')));
  *app.use('/', express.static(path.join(__dirname, '../dist')));
  *
+ * 
  */
+app.use(compression());  
+app.use(express.static('dist')); 
 app.get('*', function(req, res) {  
   res.sendFile(path.join(__dirname, '../dist', 'index.html'));
 });

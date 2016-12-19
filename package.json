@@ -33,10 +33,14 @@
   "homepage": "https://github.com/alancampora/quilombodrivdev#readme",
   "devDependencies": {
     "colors": "^1.1.2",
+    "css-loader": "^0.26.1",
     "jasmine-node": "^1.14.5",
+    "node-sass": "^4.0.0",
     "onchange": "^3.2.0",
     "rimraf": "^2.5.4",
+    "sass-loader": "^4.1.0",
     "serve-favicon": "^2.3.2",
+    "style-loader": "^0.13.1",
     "webpack": "^1.12.12"
   },
   "dependencies": {

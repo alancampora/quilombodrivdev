@@ -17,8 +17,12 @@ module.exports = {
                 loader: 'babel-loader',
                 query: {
                     presets: ['react', 'es2015']
-                }
-            },
+                },
+
+            }, {
+                test: /\.scss$/,
+                loaders: ["style-loader", "css-loader?sourceMap", "sass-loader?sourceMap"]
+            }
             //{
             //test: /\.scss$/,
             //loaders: ["sass-loader"]

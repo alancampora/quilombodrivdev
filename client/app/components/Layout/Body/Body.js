@@ -2,6 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Post from '../../Post/Post';
 
+require('./Body.scss')
+
 class Body extends React.Component {
     
     createPostsArray(){
@@ -15,8 +17,8 @@ class Body extends React.Component {
         const posts = this.createPostsArray(); 
         
         return ( 
-            <div>
-                <h1> This is the body!!!!</h1>
+            <div className='Body'>
+                <h1> Quilombo driven development </h1>
                 {posts} 
             </div>
         );

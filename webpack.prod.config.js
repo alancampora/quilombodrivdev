@@ -41,8 +41,7 @@ export default {
             }
         }, {
             test: /\.scss?$/,
-            loader: 'style!css!sass',
-            include: path.join(__dirname, 'src', 'styles')
+            loaders: ["style-loader", "css-loader?sourceMap", "sass-loader?sourceMap"], 
         }, {
             test: /\.png$/,
             loader: 'file'

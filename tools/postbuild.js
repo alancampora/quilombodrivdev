@@ -9,7 +9,7 @@ const port = process.env.PORT || 3000;
 const app = express();
 
 console.log(__dirname);
-
+console.log('path join' , (path.join(__dirname, '../dist')));
 app.use('/', express.static(path.join(__dirname, '../dist')));
 
 app.listen(port, function(err) {  

@@ -1,12 +1,14 @@
 import React, { PropTypes } from 'react'
 import { connect } from 'react-redux'
 import Body from '../components/Layout/Body/Body'
+import Header from '../components/Layout/Header/Header'
 
 class App extends React.Component {
     render(){
        return( 
             <div className='App'>
-                 <Body posts={this.props.posts}/>
+                <Header />
+                <Body posts={this.props.posts}/>
             </div>
        );
     }

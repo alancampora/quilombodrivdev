@@ -18,7 +18,6 @@ class Body extends React.Component {
         
         return ( 
             <div className='Body'>
-                <h1> Quilombo driven development </h1>
                 {posts} 
             </div>
         );

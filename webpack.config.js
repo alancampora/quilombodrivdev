@@ -39,7 +39,8 @@ module.exports = {
         new webpack.DefinePlugin({
             'process.env': {
                 'NODE_ENV': JSON.stringify('development'),
-                'API_HOST': JSON.stringify('http://localhost:8089')
+                'API_HOST': JSON.stringify('http://localhost:8089'),
+                'ROUTE_PREFIX': JSON.stringify('/client/app')
             }
         })
     ]

@@ -1,23 +1,22 @@
 import React, { PropTypes } from 'react'
 import { connect } from 'react-redux'
-import Body from '../components/Layout/Body/Body'
-import Header from '../components/Layout/Header/Header'
 
 class App extends React.Component {
     render(){
        return( 
-            <div className='App'>
-                <Header />
-                <Body posts={this.props.posts}/>
+            <div>
+                {this.props.children}
             </div>
        );
     }
 }  
 
+export default App;
 
-App.propTypes = {
-  posts: PropTypes.array.isRequired,
-}
+
+/*App.propTypes = {*/
+  //posts: PropTypes.array.isRequired,
+//}
 
 //Somehow connect, connects the state with the container APP =)
  /*state structure
@@ -27,9 +26,9 @@ App.propTypes = {
   *       description: "Welcome to the first post of qdd!"
   *   },
   */
-const mapStateToProps = function (state) {
-    return {posts :state.posts}
-}
+/*const mapStateToProps = function (state) {*/
+    //return {posts :state.posts}
+//}
 
 
-export default connect(mapStateToProps)(App)
+/*export default connect(mapStateToProps)(App)*/
